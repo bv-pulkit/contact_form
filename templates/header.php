@@ -1,18 +1,18 @@
 <head>
 <title>Blogvault</title>
 <link rel = "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <style type = "text/css">
-    .brand{
-      background: #5DBB63 !important;
-    }
-    .brand-text{
-      color: #043927 !important;
-    }
-    form{
+	<style type = "text/css">
+		.brand{
+			background: #5DBB63 !important;
+		}
+		.brand-text{
+			color: #043927 !important;
+		}
+		form{
 			max-width: 660px;
-      margin: 20px auto;
-      padding: 20px;
-    }
+			margin: 20px auto;
+			padding: 20px;
+		}
 </style>
 </head>
 <body class = "grey lighten-4">

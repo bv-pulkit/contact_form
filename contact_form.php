@@ -7,10 +7,6 @@
  * Author: Pulkit
  * Author URI: https://www.your-site.com/
  **/
-require_once('./../wp-load.php');
-if(isset($_GET['email'])){
-	die(var_dump("I am dead"));
-}
 $email = $fname = $lname = $contact = $subject = $description = '';
 $errors = array('email' => '', 'fname' => '', 'lname' => '', 'contact' => '', 'subject' => '', 'description' => '');
 if(isset($_POST['submit'])){
@@ -57,8 +53,8 @@ if(isset($_POST['submit'])){
 
 	if(array_filter($errors)){}
 	else{
-		//$data = add_option('contact_form_data', ['email' => $_POST['email'], 'fname' => $_POST['fname'], 'lname' => $_POST['lname'], 'contact' => $_POST['contact'], 'subject' => $_POST['subject'], 'description' => $_POST['decription']]) ;
-		$a = get_option('admin_email');
+		$data = add_option('contact_form_data', ['email' => $_POST['email'], 'fname' => $_POST['fname'], 'lname' => $_POST['lname'], 'contact' => $_POST['contact'], 'subject' => $_POST['subject'], 'description' => $_POST['decription']]) ;
+		$admin_email = get_option('admin_email');
 		header('Location: index.html');
 	}
 }
