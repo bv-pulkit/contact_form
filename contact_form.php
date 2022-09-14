@@ -50,10 +50,12 @@ if(isset($_POST['submit'])){
 		$errors['description'] = 'Description is required';
 	else
 		$description = $_POST['description'];
-
 	if(array_filter($errors)){}
 	else{
-		$data = add_option('contact_form_data', ['email' => $_POST['email'], 'fname' => $_POST['fname'], 'lname' => $_POST['lname'], 'contact' => $_POST['contact'], 'subject' => $_POST['subject'], 'description' => $_POST['decription']]) ;
+		$data = add_option('contact_form_data', ['email' => $_POST['email'],
+			'fname' => $_POST['fname'], 'lname' => $_POST['lname'],
+			'contact' => $_POST['contact'], 'subject' => $_POST['subject'],
+			'description' => $_POST['decription']]) ;
 		$admin_email = get_option('admin_email');
 		header('Location: index.html');
 	}
